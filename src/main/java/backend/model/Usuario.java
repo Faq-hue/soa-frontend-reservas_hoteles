@@ -1,3 +1,5 @@
+package backend.model;
+
 public class Usuario {
     private String username;
     private String nombre;
