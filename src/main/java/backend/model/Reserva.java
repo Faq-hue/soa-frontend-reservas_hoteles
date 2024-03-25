@@ -3,6 +3,7 @@ package backend.model;
 public class Reserva {
     private String fecha;
     private Usuario usuario;
+    private Hotel hotel;
     private int pasajeros;
     private float precio;
 
@@ -20,6 +21,14 @@ public class Reserva {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public Usuario getHotel() {
+        return this.hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
     }
 
     public int getPasajeros() {

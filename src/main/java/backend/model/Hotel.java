@@ -2,14 +2,14 @@ package backend.model;
 
 public class Hotel {
     private String nombre;
-    private String ciudad;
+    private String ubicacion;
     private int habitaciones;
     private float precio;
     private String img;
 
-    public Hotel(String nombre, String ciudad, int habitaciones, float precio, String img){
+    public Hotel(String nombre, String ubicacion, int habitaciones, float precio, String img){
         this.nombre = nombre;
-        this.ciudad = ciudad;
+        this.ubicacion = ubicacion;
         this.habitaciones = habitaciones;
         this.precio = precio;
         this.img = img;
@@ -23,12 +23,12 @@ public class Hotel {
         this.nombre = nombre;
     }
 
-    public String getCiudad() {
-        return this.ciudad;
+    public String getUbicacion() {
+        return this.ubicacion;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
     public int getHabitaciones() {
