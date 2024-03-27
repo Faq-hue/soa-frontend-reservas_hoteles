@@ -1,10 +1,27 @@
 package com.reservas.hoteles.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "reservas")
 public class Reserva {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Column(name = "fecha")
     private String fecha;
-    private Usuario usuario;
-    private Hotel hotel;
+	//@Column(name = "usuario")
+    //private Usuario usuario;
+	//@Column(name = "hotel")
+    //private Hotel hotel;
+	@Column(name = "pasajeros")
     private int pasajeros;
+	@Column(name = "precio")
     private float precio;
 
     public String getFecha() {
@@ -15,7 +32,7 @@ public class Reserva {
         this.fecha = fecha;
     }
 
-    public Usuario getUsuario() {
+    /*public Usuario getUsuario() {
         return this.usuario;
     }
 
@@ -29,7 +46,7 @@ public class Reserva {
 
     public void setHotel(Hotel hotel) {
         this.hotel = hotel;
-    }
+    }*/
 
     public int getPasajeros() {
         return this.pasajeros;
