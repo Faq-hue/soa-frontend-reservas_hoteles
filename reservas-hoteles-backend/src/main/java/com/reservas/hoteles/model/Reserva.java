@@ -8,60 +8,68 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "reservas")
+@Table(name = "Reservas")
 public class Reserva {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	@Column(name = "fecha")
-    private String fecha;
-	//@Column(name = "usuario")
-    //private Usuario usuario;
-	//@Column(name = "hotel")
-    //private Hotel hotel;
-	@Column(name = "pasajeros")
-    private int pasajeros;
-	@Column(name = "precio")
+	private Long idReserva;
+	@Column(name = "idHotel")
+	private Long idHotel;
+	@Column(name = "idUsuario")
+	private Long idUsuario;
+	
+	@Column(name = "fechaInicio")
+    private String fechaInicio;
+	@Column(name = "cantHabitaciones")
+	private int cantHabitaciones;
+	@Column(name = "cantPasajeros")
+    private int cantPasajeros;
+	@Column(name = "precioReserva")
     private float precio;
-
-    public String getFecha() {
-        return this.fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
-
-    /*public Usuario getUsuario() {
-        return this.usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public Hotel getHotel() {
-        return this.hotel;
-    }
-
-    public void setHotel(Hotel hotel) {
-        this.hotel = hotel;
-    }*/
-
-    public int getPasajeros() {
-        return this.pasajeros;
-    }
-
-    public void setPasajeros(int pasajeros) {
-        this.pasajeros = pasajeros;
-    }
-
-    public float getPrecio() {
-        return this.precio;
-    }
-
-    public void setPrecio(float precio) {
-        this.precio = precio;
-    }
-
+	public Reserva(Long idHotel, Long idUsuario, String fechaInicio, int cantHabitaciones, int cantPasajeros,
+			float precio) {
+		super();
+		this.idHotel = idHotel;
+		this.idUsuario = idUsuario;
+		this.fechaInicio = fechaInicio;
+		this.cantHabitaciones = cantHabitaciones;
+		this.cantPasajeros = cantPasajeros;
+		this.precio = precio;
+	}
+	public Long getIdReserva() {
+		return idReserva;
+	}
+	public void setIdReserva(Long idReserva) {
+		this.idReserva = idReserva;
+	}
+	public Long getIdHotel() {
+		return idHotel;
+	}
+	public void setIdHotel(Long idHotel) {
+		this.idHotel = idHotel;
+	}
+	public Long getIdUsuario() {
+		return idUsuario;
+	}
+	public void setIdUsuario(Long idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+	public String getFechaInicio() {
+		return fechaInicio;
+	}
+	public void setFechaInicio(String fechaInicio) {
+		this.fechaInicio = fechaInicio;
+	}
+	public int getCantPasajeros() {
+		return cantPasajeros;
+	}
+	public void setCantPasajeros(int cantPasajeros) {
+		this.cantPasajeros = cantPasajeros;
+	}
+	public float getPrecio() {
+		return precio;
+	}
+	public void setPrecio(float precio) {
+		this.precio = precio;
+	}
 }

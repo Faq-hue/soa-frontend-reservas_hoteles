@@ -8,22 +8,27 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "hoteles")
+@Table(name = "Hoteles")
 public class Hotel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long idHotel;
 	@Column(name = "ubicacion")
     private String ubicacion;
-	@Column(name = "habitaciones")
-    private int habitaciones;
+	@Column(name = "cantHabitaciones")
+    private int cantHabitaciones;
 	@Column(name = "precio")
     private float precio;
-	@Column(name = "imagenes")
-    private String img;
+	
 	@Column(name = "nombre")
     private String nombre;
-
+	public Hotel(String nombre, String ubicacion, int cantHabitaciones, float precio) {
+		super();
+		this.nombre = nombre;
+		this.ubicacion = ubicacion;
+		this.cantHabitaciones = cantHabitaciones;
+		this.precio = precio;
+	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -36,11 +41,11 @@ public class Hotel {
 	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
 	}
-	public int getHabitaciones() {
-		return habitaciones;
+	public int getCantHabitaciones() {
+		return cantHabitaciones;
 	}
-	public void setHabitaciones(int habitaciones) {
-		this.habitaciones = habitaciones;
+	public void setCantHabitaciones(int cantHabitaciones) {
+		this.cantHabitaciones = cantHabitaciones;
 	}
 	public float getPrecio() {
 		return precio;
@@ -48,10 +53,5 @@ public class Hotel {
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
-	public String getImg() {
-		return img;
-	}
-	public void setImg(String img) {
-		this.img = img;
-	}    
+
 }
