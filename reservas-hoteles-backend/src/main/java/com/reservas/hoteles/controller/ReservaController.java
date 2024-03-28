@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.reservas.hoteles.model.Reserva;
 import com.reservas.hoteles.repository.IReservaRepository;
 
+///TODO hacer metodo add reserva
+
 @RestController
 @RequestMapping("/api/v1")
 public class ReservaController {

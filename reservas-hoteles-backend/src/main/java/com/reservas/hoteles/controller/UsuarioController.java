@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.reservas.hoteles.model.Usuario;
 import com.reservas.hoteles.repository.IUsuarioRepository;
 
+///TODO hacer metodo para registrarse como nuevo cliente
+
 @RestController
 @RequestMapping("/api/v1")
 public class UsuarioController {
