@@ -6,52 +6,33 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Table(name = "Hoteles")
+@Table(name = "hoteles")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Hotel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idHotel;
-	@Column(name = "ubicacion")
+	private long id;
+	
+	@Column(nullable = false)
     private String ubicacion;
-	@Column(name = "cantHabitaciones")
-    private int cantHabitaciones;
-	@Column(name = "precio")
+	
+	@Column(nullable = false)
+    private int habitaciones;
+	
+	@Column(nullable = false)
     private float precio;
 	
-	@Column(name = "nombre")
+	@Column(nullable = false)
     private String nombre;
-	public Hotel(String nombre, String ubicacion, int cantHabitaciones, float precio) {
-		super();
-		this.nombre = nombre;
-		this.ubicacion = ubicacion;
-		this.cantHabitaciones = cantHabitaciones;
-		this.precio = precio;
-	}
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public String getUbicacion() {
-		return ubicacion;
-	}
-	public void setUbicacion(String ubicacion) {
-		this.ubicacion = ubicacion;
-	}
-	public int getCantHabitaciones() {
-		return cantHabitaciones;
-	}
-	public void setCantHabitaciones(int cantHabitaciones) {
-		this.cantHabitaciones = cantHabitaciones;
-	}
-	public float getPrecio() {
-		return precio;
-	}
-	public void setPrecio(float precio) {
-		this.precio = precio;
-	}
-
+	
+	
 }

@@ -1,0 +1,11 @@
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/model/Hotel.java
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/controller/HotelController.java
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/model/Reserva.java
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/repository/IReservaRepository.java
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/model/Usuario.java
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/exception/ResourceNotFoundException.java
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/controller/UsuarioController.java
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/ReservasHotelesBackendApplication.java
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/repository/IUsuarioRepository.java
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/controller/ReservaController.java
+/home/faq/Documentos/soa/soa-reservas_hoteles/reservas-hoteles-backend/src/main/java/com/reservas/hoteles/repository/IHotelRepository.java
