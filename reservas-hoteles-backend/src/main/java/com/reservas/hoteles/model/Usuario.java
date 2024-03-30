@@ -6,60 +6,32 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "usuarios")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "username")
+	
+	@Column(nullable = false)
 	private String username;
-	@Column(name = "nombre")
+	
+	@Column(nullable = false)
 	private String nombre;
-	@Column(name = "apellido")
+	
+	@Column(nullable = false)
 	private String apellido;
-	@Column(name = "pwd")
+	
+	@Column(nullable = false)
 	private String pwd;
 
-	// Constructor
-	public Usuario(String username, String nombre, String apellido, String pwd) {
-		this.username = username;
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.pwd = pwd;
 	}
-
-	// Métodos getter y setter para cada campo
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getApellido() {
-		return apellido;
-	}
-
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
-
-	public String getPwd() {
-		return pwd;
-	}
-
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
-	}
-}

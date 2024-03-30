@@ -20,7 +20,7 @@ import lombok.Setter;
 public class Hotel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long idHotel;
 	
 	@Column(nullable = false)
     private String ubicacion;
