@@ -8,10 +8,10 @@ import com.reservas.hoteles.exception.ResourceNotFoundException;
 import com.reservas.hoteles.model.Hotel;
 
 public interface IHotelBusiness {
-	public List<Hotel> loadBusqueda(String busqueda);
+	public List<Hotel> loadBusqueda(String busqueda) throws ResourceNotFoundException;
 	public Optional<Hotel> load(long id) throws ResourceNotFoundException;
 	public List<Hotel> list() throws ResourceNotFoundException;
-	public Hotel add(Hotel hotel);
-	public Hotel update(Hotel hotel);
+	public Hotel add(Hotel hotel) throws BusinessException;
+	public Hotel update(Hotel hotel) throws BusinessException;
 	public void delete(long id) throws BusinessException;
 }
