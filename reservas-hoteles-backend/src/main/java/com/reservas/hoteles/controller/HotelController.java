@@ -27,5 +27,7 @@ public class HotelController {
 	public void addHotel(Hotel hotel) {
 		repository.save(hotel);
 	}
+
+	
 	
 }
