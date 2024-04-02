@@ -31,7 +31,7 @@ public class Hotel {
 	@Column(nullable = false)
     private float precio;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
     private String nombre;
 	
 	
