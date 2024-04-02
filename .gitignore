@@ -1,3 +1,5 @@
 .metadata/*
 .vscode/*
 reservas-hoteles-backend/target
+reservas-hoteles-backend/target/*
+reservas-hoteles-backend/.settings
