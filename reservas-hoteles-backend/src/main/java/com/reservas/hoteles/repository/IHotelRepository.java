@@ -10,9 +10,9 @@ import com.reservas.hoteles.model.Hotel;
 
 @Repository
 public interface IHotelRepository extends JpaRepository<Hotel,Long>{
-	@Query(value = "SELECT * FROM hoteles WHERE hoteles.nombre = ?", nativeQuery = true)
+	@Query(value = "SELECT * FROM hoteles WHERE hoteles.nombre LIKE %?1%", nativeQuery = true)
 	public List<Hotel> findByNombre(String nombre);
 	
-	@Query(value = "SELECT * FROM hoteles WHERE hoteles.ubicacion = ?", nativeQuery = true)
+	@Query(value = "SELECT * FROM hoteles WHERE hoteles.ubicacion LIKE  %?1%", nativeQuery = true)
 	public List<Hotel> findByUbicacion(String ubicacion);
 }

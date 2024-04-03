@@ -34,7 +34,7 @@ public class HotelBusiness implements IHotelBusiness {
 
 			return listCombined;
 
-		} catch (Exception e) {
+		} catch (ResourceNotFoundException e) {
 			throw new ResourceNotFoundException(e.getMessage());
 		}
 	}
