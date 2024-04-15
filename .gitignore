@@ -3,3 +3,12 @@
 reservas-hoteles-backend/target
 reservas-hoteles-backend/target/*
 reservas-hoteles-backend/.settings
+reservas-hoteles-backend-usuarios/target
+reservas-hoteles-backend-usuarios/target/*
+reservas-hoteles-backend-usuarios/.settings
+reservas-hoteles-backend-hoteles/target
+reservas-hoteles-backend-hoteles/target/*
+reservas-hoteles-backend-hoteles/.settings
+reservas-hoteles-backend-reservas/target
+reservas-hoteles-backend-reservas/target/*
+reservas-hoteles-backend-reservas/.settings
